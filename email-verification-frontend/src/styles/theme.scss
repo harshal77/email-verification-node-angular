@@ -1,0 +1,43 @@
+@import './variables';
+
+.color-white {
+  color: #FFFFFF;
+}
+
+.color-persian-bl {
+  color: #1D41B0;
+}
+
+.color-cornflower-blue {
+  color: #4184F3;
+}
+
+.bgcolor-light-blue {
+  background-color: #bbc6f8
+}
+
+/** Font classes **/
+.bold-15 {
+  font-family: Bold;
+  font-size: 15px;
+}
+
+.semi-bold-15 {
+  font-family: semibold;
+  font-size: 15px;
+}
+
+.regular-12 {
+  font-family: Regular;
+  font-size: 12px;
+}
+
+.regular-24 {
+  font-family: Regular;
+  font-size: 24px;
+}
+
+.title-text {
+  font-size: 30px;
+  text-shadow: 1px 1px 1px #333333;
+}

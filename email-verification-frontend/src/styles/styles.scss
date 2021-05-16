@@ -1,0 +1,78 @@
+@import './fonts';
+@import '~@angular/material/theming';
+@include mat-core();
+// include all the app related scss variables
+@import './variables';
+// color palette secondary
+$app-primary : (50: $app-color-primary-dark, 100: $app-color-primary-dark, 200: $app-color-primary-dark, 300: $app-color-primary-dark, 400: $app-color-primary-dark, 500: $app-color-primary-dark, 600: $app-color-primary-dark, 700: $app-color-primary-dark, 800: $app-color-primary-dark, 900: $app-color-primary-dark, A100: $app-color-primary-light, A200: $app-color-primary-light, A400: $app-color-primary-light, A700: $app-color-primary-light, contrast: (50: $app-color-primary-dark, 100: $app-color-primary-dark, 200: $app-color-primary-dark, 300: $app-color-primary-dark, 400: $app-color-primary-dark, 500: $app-color-primary-dark, 600: $app-color-primary-dark, 700: $app-color-primary-dark, 800: $app-color-primary-dark, 900: $app-color-primary-dark, A100: $app-color-primary-light, A200: $app-color-primary-light, A400: $app-color-primary-light, A700: $app-color-primary-light, ));
+$app-accent: (50: $app-color-accent-dark, 100: $app-color-accent-dark, 200: $app-color-accent-dark, 300: $app-color-accent-dark, 400: $app-color-accent-dark, 500: $app-color-accent-dark, 600: $app-color-accent-dark, 700: $app-color-accent-dark, 800: $app-color-accent-dark, 900: $app-color-accent-dark, A100: $app-color-accent-light, A200: $app-color-accent-light, A400: $app-color-accent-light, A700: $app-color-accent-light, contrast: (50: $app-color-accent-dark, 100: $app-color-accent-dark, 200: $app-color-accent-dark, 300: $app-color-accent-dark, 400: $app-color-accent-dark, 500: $app-color-accent-dark, 600: $app-color-accent-dark, 700: $app-color-accent-dark, 800: $app-color-accent-dark, 900: $app-color-accent-dark, A100: $app-color-accent-light, A200: $app-color-accent-light, A400: $app-color-accent-light, A700: $app-color-accent-light, ));
+$app-warn: (50: $app-color-warn-dark, 100: $app-color-warn-dark, 200: $app-color-warn-dark, 300: $app-color-warn-dark, 400: $app-color-warn-dark, 500: $app-color-warn-dark, 600: $app-color-warn-dark, 700: $app-color-warn-dark, 800: $app-color-warn-dark, 900: $app-color-warn-dark, A100: $app-color-warn-light, A200: $app-color-warn-light, A400: $app-color-warn-light, A700: $app-color-warn-light, contrast: (50: $app-color-warn-dark, 100: $app-color-warn-dark, 200: $app-color-warn-dark, 300: $app-color-warn-dark, 400: $app-color-warn-dark, 500: $app-color-warn-dark, 600: $app-color-warn-dark, 700: $app-color-warn-dark, 800: $app-color-warn-dark, 900: $app-color-warn-dark, A100: $app-color-warn-light, A200: $app-color-warn-light, A400: $app-color-warn-light, A700: $app-color-warn-light, ));
+
+$theme: mat-light-theme($app-primary, $app-accent);
+@include angular-material-theme($theme);
+
+html,
+body {
+  height: 100%;
+  font-family: light, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: light, sans-serif;
+}
+
+:focus {
+  outline: 0 !important;
+}
+
+.width100 {
+  width: 100%;
+}
+
+.height100 {
+  height: 100%;
+}
+
+
+.input-box {
+  height: 56px;
+  padding: 0 22px;
+  border-radius: 8px;
+  border: 2px solid #C2C2C2;
+
+  .mat-form-field-underline {
+    display: none !important;
+  }
+
+  input {
+    border: none !important;
+    background: transparent !important;
+    width: 100%;
+  }
+
+  input:focus {
+    outline: none;
+  }
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.mat-focused .placeholder {
+  color: transparent;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.pointer {
+  cursor: pointer;
+}
+.selected-border-color {
+  border-style: solid;
+  border-color: #FF0B23;
+}

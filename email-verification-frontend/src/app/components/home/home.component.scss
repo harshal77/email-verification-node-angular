@@ -1,0 +1,50 @@
+.home-component {
+  height: 100%;
+  width: 100%;
+}
+
+.example-is-mobile .example-toolbar {
+  position: fixed;
+  z-index: 2;
+}
+
+h1.example-app-name {
+  margin-left: 8px;
+}
+
+.sidenav-container {
+  height: 100vh;
+}
+
+// .example-is-mobile .sidenav-container {
+//   flex: 1 0 auto;
+// }
+
+h2 {
+  margin: 0;
+}
+
+.circle {
+  height: 39px;
+  width: 39px;
+  border-radius: 50%;
+  background-color: white;
+  color: #3f51b5;
+  text-align: center;
+}
+
+.active {
+  outline: 0;
+  height: 50px;
+  background-color: #efefef;
+  color: #3f51b5 !important;
+  padding: 0 10px;
+  font-weight: 500;
+}
+
+.items {
+  height: 55px;
+  outline: 0;
+  padding: 0 10px;
+  color: #9C9C9C;
+}

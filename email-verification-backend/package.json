@@ -1,0 +1,47 @@
+{
+  "name": "emailverification",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/hapi": "^20.0.3",
+    "@hapi/inert": "^6.0.3",
+    "@hapi/vision": "^6.0.1",
+    "@types/node": "^14.14.10",
+    "concurrently": "^5.3.0",
+    "cross-env": "^7.0.3",
+    "del-cli": "^3.0.1",
+    "ejs": "^3.1.5",
+    "humps": "^2.0.1",
+    "ioredis": "^4.19.4",
+    "joi": "^17.3.0",
+    "mongoose": "^5.11.4",
+    "nconf": "^0.11.0",
+    "nodemailer": "^6.5.0",
+    "path": "^0.12.7",
+    "redis": "^3.0.2",
+    "typescript": "^4.1.2"
+  },
+  "devDependencies": {
+    "@types/hapi__hapi": "^20.0.2",
+    "nodemon": "^2.0.6"
+  },
+  "scripts": {
+    "build": "yarn cleanup && yarn compile && yarn copy",
+    "build_dev": "yarn cleanup && yarn compile && yarn cleanup_dev && yarn cp_dev_folder && yarn copy",
+    "cp_dev_folder": "cp -rf _build dev_build",
+    "cleanup_dev": "del-cli dev_build",
+    "cleanup": "del-cli _build",
+    "cleanup:all": "yarn cleanup && del-cli coverage && del-cli node_modules ",
+    "compile": "tsc",
+    "cover": "ts-node node_modules/.bin/istanbul cover -e .ts -x '*.test.ts' node_modules/.bin/tape './**/*.test.ts' | tap-spec",
+    "dev": "yarn server:dev",
+    "local": "yarn server:local",
+    "lint": "tslint 'src/**/*.ts' 'server*.ts'",
+    "server:live": "NODE_PATH=. node --harmony server.js",
+    "server:dev": "concurrently --kill-others \"node_modules/.bin/tsc -w --pretty\" \"node_modules/.bin/cross-env NODE_PATH=. NODE_ENV=development QA=false DEBUG=Paws:* logLevel=debug node_modules/.bin/nodemon -L --harmony ./_build/index.js\" ",
+    "server:local": "concurrently --kill-others \"node_modules/.bin/tsc -w --pretty\" \"node_modules/.bin/cross-env NODE_PATH=. NODE_ENV=local QA=false DEBUG=Paws:* logLevel=debug node_modules/.bin/nodemon -L --harmony ./_build/index.js\" ",
+    "test": "ts-node node_modules/.bin/tape './**/*.test.ts' | tap-spec",
+    "copy": "cp src/configurations/**.json  _build/configurations "
+  }
+}

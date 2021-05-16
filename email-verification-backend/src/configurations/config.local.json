@@ -1,0 +1,16 @@
+{
+    "configurations": {
+        "mongoConfig": {
+            "connectionString": "mongodb://localhost:27017/email-verification"
+        },
+        "serverConfig": {
+            "port": 20200,
+            "routePrefix": "/api"
+        },
+        "myHost": "localhost",
+        "senderMail": {
+            "email": "",
+            "password": ""
+        }
+    }
+}

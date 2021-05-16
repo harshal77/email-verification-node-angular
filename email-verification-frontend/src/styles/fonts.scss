@@ -1,0 +1,36 @@
+
+$RegularFont : '../assets/fonts/Poppins-Regular.ttf';
+$BoldFont : '../assets/fonts/Poppins-Bold.ttf';
+$MediumFont : '../assets/fonts/Poppins-Medium.ttf';
+$SemiBoldFont: '../assets/fonts/Poppins-SemiBold.ttf';
+$LightFont: '../assets/fonts/Poppins-Light.ttf';
+
+@font-face {
+  font-family: Regular;
+  font-style: normal;
+  src: url($RegularFont);
+}
+
+@font-face {
+  font-family: medium;
+  font-style: normal;
+  src: url($MediumFont);
+}
+
+@font-face {
+  font-family: bold;
+  font-style: normal;
+  src: url($BoldFont);
+}
+
+@font-face {
+  font-family: semibold;
+  font-style: normal;
+  src: url($SemiBoldFont);
+}
+
+@font-face {
+  font-family: light;
+  font-style: normal;
+  src: url($LightFont);
+}

@@ -1,0 +1,29 @@
+<div fxLayout="row" class="login-component">
+  <div class="bgcolor-light-blue" fxFlex=40 fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px">
+  </div>
+  <div fxFlex="60" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="60px">
+    <span class="title-text color-persian-bl">Login In</span>
+    <div fxLayout="row" fxLayoutAlign="center center" class="width100">
+      <form fxFlex="70" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px" [formGroup]="loginForm"
+        (ngSubmit)="onSubmit()">
+        <mat-form-field class="width100">
+          <input type="email" matInput placeholder="Your email" formControlName="email">
+          <mat-error>Invalid or missing email.</mat-error>
+        </mat-form-field>
+        <mat-form-field class="width100">
+          <input type="password" matInput placeholder="Your password" formControlName="password">
+          <mat-error>Missing password.</mat-error>
+        </mat-form-field>
+        <div fxLayout="column" fxLayoutGap="10px" class="width100">
+          <div fxLayout="row" fxLayoutAlign="space-between center">
+            <p class="regular-12">Don't have account ? <span class="semi-bold-15 pointer color-persian-bl"
+                (click)="createAccount()"> Create account</span> </p>
+            <button type="submit" mat-raised-button color="primary" [disabled]="loginForm.invalid">Submit</button>
+          </div>
+          <p *ngIf="isVerification" class="regular-12"><span class="semi-bold-15 pointer color-persian-bl"
+              (click)="resendMail()"> Resend Verification email</span> </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
