@@ -36,17 +36,17 @@
         ],
     }
 
-#### Input Field Explanation: 
+## Input Field Explanation: 
     1. schema_name: Table Name which need to be created.
     2. columns : Column Deatils
 
 
 
-## API Details with enpoints:
-# 1) /login  => To login the verified user
-# 1) /sign-up => To create new User 
-# 1) /resend-email => To resend the mail for verification 
-# 1) /verify-email/{id} => To verify mail using link which is sent by register mail
+# API Details with enpoints:
+ 1) /login  => To login the verified user
+ 2) /sign-up => To create new User 
+ 3) /resend-email => To resend the mail for verification 
+ 4) /verify-email/{id} => To verify mail using link which is sent by register mail
 
 
 
